@@ -2,18 +2,7 @@
 
 A modern, full-stack quiz platform built using **React (Frontend)** and **Node.js (Backend)**, featuring real-time scoring, multiple quiz categories, and a sleek **glassmorphism UI**. This project demonstrates clean architecture, modular backend design, and responsive frontend implementation for an end-to-end quiz experience.
 
----
-## 📷 Screenshots
 
-### 1. User Registration
-![User Registration](./Assets/UserRegister.png)
-
-### 2. Quiz Interface
-![Quiz Interface](./Assets/QuizInterface.png)
-
-### 3. Score Summary
-![Score Summary](./Assets/ScoreCard.png)
----
 
 ---
 
@@ -171,7 +160,7 @@ POST http://localhost:3000/api/v1/quiz-attempts/random
 ## 💡 Design Choices & Assumptions
 
 ### 🧱 Architecture Decisions
-1. **Monorepo Structure** – Single repository with `/frontend` and `/backend` for ease of deployment.
+1. **Monorepo Structure->Not Kinda But You Can Say That** – Single repository with `/frontend` and `/backend` for ease of deployment.
 2. **SQLite Database** – Lightweight, easy setup, ideal for local development.
 3. **Context API + useReducer** – Centralized state without external dependencies like Redux.
 4. **RESTful APIs** – Clean, JSON-based communication between frontend and backend.
@@ -191,17 +180,6 @@ POST http://localhost:3000/api/v1/quiz-attempts/random
 - CORS enabled for all origins
 - No rate limiting or input sanitization
 
-### 🚀 Recommended Improvements
-- Add JWT-based authentication
-- Enable rate limiting
-- Sanitize inputs using middleware
-- Move secrets to `.env`
-- Deploy with HTTPS
-
-### 📈 Scalability Considerations
-- Switch to **PostgreSQL** or **MongoDB** for production
-- Add Redis for caching or session management
-- Implement Docker for containerization
 
 ---
 
@@ -269,6 +247,19 @@ VITE_API_URL=http://localhost:3000/api/v1
 
 ---
 
+---
+## 📷 Screenshots
+
+### 1. User Registration
+![User Registration](./Assets/UserRegister.png)
+
+### 2. Quiz Interface
+![Quiz Interface](./Assets/QuizInterface.png)
+
+### 3. Score Summary
+![Score Summary](./Assets/ScoreCard.png)
+
+---
 
 >  Built by Shivansh Saxena – Clean code, modern design, and a love for learning!
 

@@ -5,7 +5,7 @@ import { getAttempt, submitQuiz } from "../../controllers/attempt.controller.js"
 const router = Router();
 
 
-router.post('/random', submitQuiz)
+router.post('/submit', submitQuiz)
 router.get('/:id',getAttempt)
 
 

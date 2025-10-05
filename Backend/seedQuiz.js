@@ -5,10 +5,10 @@ import quizzes from "./constants/data.js";
 const db = await initDb();
 
 try {
-  // Start transaction
+  
   await db.exec("BEGIN TRANSACTION");
 
-  // --- 1. Create tables ---
+ 
   await db.exec(`
     CREATE TABLE IF NOT EXISTS User (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,7 +44,7 @@ try {
     );
   `);
 
-  // --- 2. Clean previous data (optional for re-seeding) ---
+  // 2. Clean previous data (optional for re-seeding) Such that all the previous data get removed
   await db.exec(`
     DELETE FROM Question;
     DELETE FROM Quiz;
@@ -70,9 +70,9 @@ try {
 
   // Commit transaction
   await db.exec("COMMIT");
-  console.log("✅ All quizzes and questions inserted successfully!");
+  console.log("All quizzes and questions inserted ");
 
 } catch (err) {
   await db.exec("ROLLBACK");
-  console.error("❌ Error seeding database:", err);
+  console.error("Error seeding database:", err);
 }

@@ -13,28 +13,21 @@ export const QuizInterface = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  console.log('QuizInterface render - State:', {
-    hasUser: !!state.user,
-    userId: state.user?.id,
-    hasQuiz: !!state.quiz,
-    quizId: state.quiz?.id,
-    timeRemaining: state.timeRemaining,
-    quizCompleted: state.quizCompleted
-  });
 
-  // Define handleSubmit with useCallback
+
+  
   const handleSubmit = useCallback(async () => {
-    console.log('handleSubmit called');
+   
     
-    // Safety checks
+    
     if (!state.quiz?.id) {
-      console.error('Cannot submit: Quiz not loaded');
+     
       setError('Quiz not loaded properly. Please refresh the page.');
       return;
     }
     
     if (!state.user?.id) {
-      console.error('Cannot submit: User not found');
+     
       setError('User not found. Please login again.');
       navigate('/');
       return;
@@ -44,11 +37,7 @@ export const QuizInterface = () => {
     setError('');
 
     try {
-      console.log('Submitting quiz:', {
-        quizId: state.quiz.id,
-        userId: state.user.id,
-        answersCount: Object.keys(state.answers).length
-      });
+     
 
       const response = await apiService.submitQuiz(
         state.quiz.id,
@@ -56,7 +45,7 @@ export const QuizInterface = () => {
         state.answers
       );
       
-      console.log('Submit response:', response);
+      
       dispatch({ type: 'SUBMIT_QUIZ', payload: response.data });
       navigate('/results');
     } catch (err) {
@@ -67,10 +56,10 @@ export const QuizInterface = () => {
     }
   }, [state.quiz?.id, state.user?.id, state.answers, dispatch, navigate]);
 
-  // Load quiz effect
+ 
   useEffect(() => {
     if (!state.user) {
-      console.log('No user found, redirecting to home');
+      
       navigate('/');
       return;
     }
@@ -80,10 +69,10 @@ export const QuizInterface = () => {
       setError('');
       
       try {
-        console.log('Fetching random quiz...');
+        
         const response = await apiService.getRandomQuiz();
         
-        console.log('Quiz API Response:', response);
+        
         
         // Validate response
         if (!response || !response.data) {
@@ -122,22 +111,22 @@ export const QuizInterface = () => {
   useEffect(() => {
    
     if (!state.quiz) {
-      console.log('Timer effect: Quiz not loaded yet, skipping');
+     
       return;
     }
 
     if (state.timeRemaining > 0 && !state.quizCompleted) {
-      console.log('Starting timer, time remaining:', state.timeRemaining);
+   
       const timer = setInterval(() => {
         dispatch({ type: 'TICK_TIMER' });
       }, 1000);
 
       return () => {
-        console.log('Clearing timer');
+      
         clearInterval(timer);
       };
     } else if (state.timeRemaining === 0 && !state.quizCompleted && state.quiz) {
-      console.log('Time up! Auto-submitting quiz');
+     
       handleSubmit();
     }
   }, [state.timeRemaining, state.quizCompleted, state.quiz, handleSubmit, dispatch]);

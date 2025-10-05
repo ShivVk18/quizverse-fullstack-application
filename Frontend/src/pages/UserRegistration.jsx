@@ -31,9 +31,9 @@ export const UserRegistration = () => {
 
     try {
       const userData = await apiService.createUser(username, email);
-      console.log('API Response:', userData);
       
-      // Ensure we have the correct user object structure
+      
+      
       const user = {
         id: userData.id,
         username: userData.username,

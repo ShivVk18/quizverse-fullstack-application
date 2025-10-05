@@ -12,7 +12,7 @@ const getRandomQuiz = async () => {
       return null;
     }
     
-    console.log("Found quiz:", quiz);
+    
     return quiz;
   } catch (error) {
     console.error("Error in getRandomQuiz:", error);

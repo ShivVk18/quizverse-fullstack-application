@@ -17,7 +17,7 @@ export const apiService = {
 
     const data = await response.json();
     
-    // Ensure consistent structure
+    
     return {
       id: data.id,
       username: data.username,
@@ -52,7 +52,7 @@ export const apiService = {
       throw new Error('Quiz ID is required');
     }
     
-    const response = await fetch(`${API_BASE_URL}/quiz-attempts/random`, {
+    const response = await fetch(`${API_BASE_URL}/quiz-attempts/submit`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
