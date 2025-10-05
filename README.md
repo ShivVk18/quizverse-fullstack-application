@@ -43,7 +43,7 @@ quiz-application/
 │   │   └── routes/             # API endpoints
 │   ├── constants/data.js       # Quiz seed data
 │   ├── db/quiz.db              # SQLite database
-│   ├── seed.js                 # Database seeding script
+│   ├── seedQuiz.js                 # Database seeding script
 │   ├── index.js                # Server entry point
 │   └── package.json
 │
@@ -89,10 +89,10 @@ npm install
 npm install express cors sqlite3 sqlite
 
 # Seed the database
-node seed.js
+node seedQuiz.js
 
 # Start the backend server
-node index.js
+npm run dev
 ```
 ✅ Backend runs on **http://localhost:3000**
 
