@@ -4,6 +4,14 @@ A modern, full-stack quiz platform built using **React (Frontend)** and **Node.j
 
 
 
+
+--- 
+## Demo Video -> Loom Link 
+
+### Loom Link:
+[Watch the Demo](https://www.loom.com/share/d9f56006b12243ae8cc83f6303b9f11d?sid=2e5c7742-c440-4691-8a52-55b545bfd919)
+
+---
 ---
 
 ## 📖 Project Overview
