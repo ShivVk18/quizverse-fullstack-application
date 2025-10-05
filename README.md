@@ -1,9 +1,6 @@
 # 🧠 QuizVerse – Full Stack Quiz Application
 
-A modern, full-stack quiz platform built using **React (Frontend)** and **Node.js (Backend)**, featuring real-time scoring, multiple quiz categories, and a sleek **glassmorphism UI**. This project demonstrates clean architecture, modular backend design, and responsive frontend implementation for an end-to-end quiz experience.
-
-
-
+QuizVerse is a modern, full-stack quiz platform designed to deliver an engaging and interactive learning experience. Users can register, attempt timed quizzes, and review detailed results with performance analytics. Built with React and Tailwind CSS, the frontend offers a sleek, responsive, glassmorphism UI, while the Node.js backend provides robust RESTful APIs for quiz management and result evaluation.
 
 --- 
 ## Demo Video -> Loom Link 
