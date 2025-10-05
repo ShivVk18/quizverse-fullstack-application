@@ -74,7 +74,7 @@ npm run dev
 | ------------------- | ------ | ---------------------------- |
 | Create / Fetch User | POST   | /api/v1/users/create         |
 | Get Random Quiz     | GET    | /api/v1/quiz/random          |
-| Submit Quiz         | POST   | /api/v1/quiz-attempts/random |
+| Submit Quiz         | POST   | /api/v1/quiz-attempts/submit |
 
 ---
 

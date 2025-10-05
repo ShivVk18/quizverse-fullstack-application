@@ -155,7 +155,7 @@ GET http://localhost:3000/api/v1/quiz/random
 ```
 #### Submit Quiz
 ```
-POST http://localhost:3000/api/v1/quiz-attempts/random
+POST http://localhost:3000/api/v1/quiz-attempts/submit
 {
   "quizId": 1,
   "userId": 1,
@@ -210,10 +210,9 @@ VITE_API_URL=http://localhost:3000/api/v1
 | Method | Endpoint | Description |
 |---------|-----------|-------------|
 | POST | /api/v1/users/create | Create or fetch user |
-| GET | /api/v1/users/:id | Get user by ID |
 | GET | /api/v1/quiz/random | Fetch random quiz |
-| POST | /api/v1/quiz-attempts/random | Submit quiz answers |
-| GET | /api/v1/quiz-attempts/:id | Get quiz attempt details |
+| POST | /api/v1/quiz-attempts/submit | Submit quiz answers |
+
 
 **Response Format:**
 ```json

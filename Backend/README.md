@@ -132,12 +132,10 @@ All responses follow this structure:
 
 - `POST /api/v1/users/create` - Create a new user or return existing
 
-  **Body**
+ 
   ```json
-  { "name": "John Doe", "email": "john@example.com" }
+  { "name": "Shiv", "email": "shivansh@example.com" }
   ```
-
-- `GET /api/v1/users/:id` - Get user by ID
 
 
 ### Quiz Routes
@@ -162,7 +160,7 @@ All responses follow this structure:
 
 ### Quiz Attempt Routes
 
-- `POST /api/v1/quiz-attempts/random` - Submit quiz answers
+- `POST /api/v1/quiz-attempts/submit` - Submit quiz answers
 
   **Body**
   ```json
@@ -182,7 +180,7 @@ All responses follow this structure:
   - Stores the attempt (answers + score) in `QuizAttempt`
   - Returns detailed result marking each question correct/incorrect
 
-- `GET /api/v1/quiz-attempts/:id` - Get attempt details by ID
+
 
 ---
 
@@ -229,16 +227,7 @@ The server will start on `http://localhost:3000` (or the port specified in `PORT
 
 ---
 
-## Environment Variables
 
-Create a `.env` file in the project root:
-
-```env
-PORT=3000
-DB_PATH=./db/quiz.db   # optional: path to sqlite file
-```
-
----
 
 ## Database Seeding
 
@@ -270,14 +259,7 @@ Each quiz contains 10 multiple-choice questions with 4 options.
 
 ---
 
-## Notes & Recommendations
 
-- Store `options` and `answers` as JSON strings in the DB to keep the schema flexible.
-- Use transactions during seeding to avoid partial inserts.
-- Consider indexing `quizId` on `Question` and `userId`/`quizId` on `QuizAttempt` for faster lookups if the DB grows.
-- Add rate-limiting and input validation (e.g., `express-validator`) for production readiness.
-
----
 
 ## Contribution
 
