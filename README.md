@@ -3,6 +3,14 @@
 A modern, full-stack quiz platform built using **React (Frontend)** and **Node.js (Backend)**, featuring real-time scoring, multiple quiz categories, and a sleek **glassmorphism UI**. This project demonstrates clean architecture, modular backend design, and responsive frontend implementation for an end-to-end quiz experience.
 
 ---
+## Screenshots
+![User Registration](./Assets/UserRegister.png)
+![Quiz Interface](./Assets/QuizInterface.png)
+![Score Summary](./Assets/ScoreCard.png)
+
+---
+
+---
 
 ## 📖 Project Overview
 

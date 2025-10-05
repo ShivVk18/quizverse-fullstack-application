@@ -21,7 +21,7 @@ A modern, interactive quiz platform built with **React + Tailwind CSS**, featuri
 
 | Category             | Technology               |
 | -------------------- | ------------------------ |
-| **Framework**        | React 18 (Vite)          |
+| **Framework**        | React 19 (Vite)          |
 | **Routing**          | React Router DOM         |
 | **State Management** | Context API + useReducer |
 | **Styling**          | Tailwind CSS             |
