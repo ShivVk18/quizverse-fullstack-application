@@ -8,7 +8,6 @@ A modern, full-stack quiz platform built using **React (Frontend)** and **Node.j
 
 **QuizVerse** allows users to:
 - Register and take quizzes across multiple categories (Tech, Cricket, Football)
-- Answer 10 questions per quiz with a 30-second timer per question
 - Receive instant feedback and detailed score breakdowns
 - Review answers with correct/incorrect indicators
 - Track quiz attempts in a persistent SQLite database
@@ -16,7 +15,7 @@ A modern, full-stack quiz platform built using **React (Frontend)** and **Node.j
 ### 🧩 Tech Stack
 | Layer | Technology |
 |-------|-------------|
-| **Frontend** | React 18, React Router DOM, Tailwind CSS, Lucide Icons |
+| **Frontend** | React 19, React Router DOM, Tailwind CSS, Lucide Icons |
 | **Backend** | Node.js, Express.js |
 | **Database** | SQLite3 |
 | **State Management** | Context API + useReducer |
@@ -165,7 +164,6 @@ POST http://localhost:3000/api/v1/quiz-attempts/random
 4. **RESTful APIs** – Clean, JSON-based communication between frontend and backend.
 
 ### 🔑 Key Assumptions
-- Timer: 30 seconds per question
 - Auto-submit: Enabled after timeout
 - Scoring: +1 per correct answer, no negative marking
 - User session: Stored in React Context (resets on refresh)
@@ -238,7 +236,7 @@ VITE_API_URL=http://localhost:3000/api/v1
 ---
 
 ## 🔮 Future Enhancements
-- User authentication (JWT)
+- User authentication with JWT
 - Quiz category selection
 - Leaderboards & ranking
 - Question randomization
@@ -246,7 +244,7 @@ VITE_API_URL=http://localhost:3000/api/v1
 - Explanations for answers
 - Multi-language support
 - Timed practice mode
-
+- AI powered question generation
 ---
 
 ## 🤝 Contributing
@@ -258,10 +256,6 @@ VITE_API_URL=http://localhost:3000/api/v1
 
 ---
 
-## 📜 License
-**MIT License** – Free to use, modify, and distribute for personal or commercial use.
 
----
-
-> 💬 Built with ❤️ by Shivansh Saxena – Clean code, modern design, and a love for learning!
+>  Built by Shivansh Saxena – Clean code, modern design, and a love for learning!
 
